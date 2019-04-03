@@ -63,7 +63,7 @@ public class Blackjack {
         int sisestusRaha = keyboard.nextInt();
         Mängija mängija =new Mängija(sisestusRaha,0);
         Diiler diiler= new Diiler(0);
-        Diiler diiler2= new Diiler(0);
+        
 
 
 
