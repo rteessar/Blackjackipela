@@ -18,13 +18,13 @@ public class Diiler implements Tegevused{
     public void setPunktid(int punktid) {
         this.punktid = punktid;
     }
-    public void punkteOn(){
+    public String punkteOn(){
         int punkt=0;
         for (Kaardid kaart : this.dKaardid) {
             punkt=punkt+kaart.getPunktid();
         }
         setPunktid(punkt);
-        System.out.println("Sul on kokku "+getPunktid());
+        return "Diileril on kokku "+getPunktid();
     }
 
     @Override
@@ -34,11 +34,14 @@ public class Diiler implements Tegevused{
         System.out.println("Üks peidetud kaart");
 
     }
+    public void saaKaardid2() {
+        System.out.println("Diileri 2. kaart oli "+dKaardid.get(1));
+    }
 
 
     @Override
     public void hit(ArrayList<Kaardid> pakk) {
-        int kaardiKoht=(int) Math.round(Math.random()*(pakk.size()));
+        int kaardiKoht=(int) Math.round(Math.random()*(pakk.size()-1));
         this.dKaardid.add(pakk.get(kaardiKoht));
         pakk.remove(kaardiKoht);
     }

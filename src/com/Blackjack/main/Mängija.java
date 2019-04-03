@@ -27,23 +27,25 @@ public class Mängija implements Tegevused {
     }
     public void võidab(int panus){
         this.raha=this.raha+panus;
+        System.out.println("Sul on alles "+this.getRaha()+"€");
     }
     public void kaotab(int panus){
         this.raha=this.raha-panus;
+        System.out.println("Sul on alles "+this.getRaha()+"€");
     }
 
     public void hit(ArrayList<Kaardid> pakk){
-        int kaardiKoht=(int) Math.round(Math.random()*(pakk.size()));
+        int kaardiKoht=(int) Math.round(Math.random()*(pakk.size()-1));
             this.mKaardid.add(pakk.get(kaardiKoht));
             pakk.remove(kaardiKoht);
     }
-    public void punkteOn(){
+    public String punkteOn(){
         int punkt=0;
         for (Kaardid kaart : this.mKaardid) {
             punkt=punkt+kaart.getPunktid();
         }
         setPunktid(punkt);
-        System.out.println("Sul on kokku "+getPunktid());
+        return "Sul on kokku "+getPunktid();
     }
 
     public int compareTo(Diiler o){
