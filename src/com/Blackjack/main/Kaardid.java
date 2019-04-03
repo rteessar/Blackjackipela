@@ -1,11 +1,11 @@
 package com.Blackjack.main;
 
 public class Kaardid {
-    private String mast;
-    private String nimetus;
+    private Mastid mast;
+    private Nimetused nimetus;
     private int punktid;
 
-    public Kaardid(String mast, String nimetus, int punktid) {
+    public Kaardid(Mastid mast, Nimetused nimetus, int punktid) {
         this.mast = mast;
         this.nimetus = nimetus;
         this.punktid = punktid;
@@ -13,6 +13,6 @@ public class Kaardid {
 
     @Override
     public String toString() {
-        return mast+nimetus;
+        return mast+" "+nimetus;
     }
 }
