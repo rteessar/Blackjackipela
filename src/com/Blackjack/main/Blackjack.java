@@ -29,7 +29,7 @@ public class Blackjack {
             }
 
             }
-        System.out.println(kaardiPakk);
+
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Mitme euroga soovid lauda istuda");
@@ -42,8 +42,10 @@ public class Blackjack {
         diiler.hit(kaardiPakk);
         mängija.hit(kaardiPakk);
         diiler.hit(kaardiPakk);
-        System.out.println("Mängijal ");
+        mängija.saaKaardid();
+        mängija.punkteOn();
 
+        diiler.saaKaardid();
 
     }
 

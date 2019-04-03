@@ -16,6 +16,9 @@ public class Mängija implements Tegevused {
     public int getPunktid() {
         return punktid;
     }
+
+
+
     public void setRaha(int raha) {
         this.raha = raha;
     }
@@ -34,13 +37,13 @@ public class Mängija implements Tegevused {
             this.mKaardid.add(pakk.get(kaardiKoht));
             pakk.remove(kaardiKoht);
     }
-    public void punkteOn(Mängija mängija){
+    public void punkteOn(){
         int punkt=0;
         for (Kaardid kaart : this.mKaardid) {
             punkt=punkt+kaart.getPunktid();
         }
-        mängija.setPunktid(punkt);
-        System.out.println();
+        setPunktid(punkt);
+        System.out.println("Sul on kokku "+getPunktid());
     }
 
     public int compareTo(Diiler o){
@@ -50,9 +53,16 @@ public class Mängija implements Tegevused {
             return 1;
         return 0;
     }
+    public void saaKaardid(){
+        System.out.println("Mängijal on: ");
+        for (Kaardid kaart : this.mKaardid) {
+            System.out.println(kaart);
+        }
+    }
 
     @Override
     public String toString() {
         return "Mängijal on  alles "+raha+"€";
     }
+
 }
