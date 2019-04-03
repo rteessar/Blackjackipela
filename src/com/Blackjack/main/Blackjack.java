@@ -8,7 +8,7 @@ public class Blackjack {
 
     public static void main(String[] args) {
 
-        List<Kaardid> kaardiPakk = new ArrayList<>();
+        ArrayList<Kaardid> kaardiPakk = new ArrayList<>();
 
 
         for(Mastid mast:Mastid.values()){
@@ -37,14 +37,15 @@ public class Blackjack {
         Mängija mängija =new Mängija(sisestusRaha,0);
         Diiler diiler= new Diiler(0);
 
-
-
-
-
-
-
+        System.out.println("Mäng algab!");
+        mängija.hit(kaardiPakk);
+        diiler.hit(kaardiPakk);
+        mängija.hit(kaardiPakk);
+        diiler.hit(kaardiPakk);
+        System.out.println("Mängijal ");
 
 
     }
+
 
 }

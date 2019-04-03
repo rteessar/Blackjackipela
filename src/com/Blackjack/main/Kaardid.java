@@ -11,6 +11,10 @@ public class Kaardid {
         this.punktid = punktid;
     }
 
+    public int getPunktid() {
+        return punktid;
+    }
+
     @Override
     public String toString() {
         return mast+" "+nimetus;
