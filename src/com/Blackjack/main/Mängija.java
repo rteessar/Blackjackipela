@@ -1,5 +1,7 @@
 package com.Blackjack.main;
 
+import java.util.ArrayList;
+
 public class Mängija  {
     private int raha;
     private int punktid;
@@ -27,6 +29,9 @@ public class Mängija  {
     public void kaotab(int panus){
         raha=raha-panus;
     }
+    public void hit(ArrayList O){
+
+    }
 
     public int compareTo(Diiler o){
         if (this.punktid < o.getPunktid())
@@ -35,6 +40,7 @@ public class Mängija  {
             return 1;
         return 0;
     }
+
 
 
 
